@@ -2,6 +2,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestHealthClubSystem {
@@ -24,13 +26,18 @@ public class TestHealthClubSystem {
     @Test
     @DisplayName("Test delete member")
     public void testDeleteAccount() {
+        String id = "";
         HealthClubSystem.setMembers(); // set state of hashmap
         HashMap<String, Member> members = HealthClubSystem.getMembers(); // get state
         assertNotNull(members);
         assertFalse(members.isEmpty());
-        assertTrue(members.containsKey("222222222222"));
-        HealthClubSystem.removeMember("222222222222");
-        assertFalse(members.containsKey("222222222222"));
+        for (Map.Entry<String, Member> entry: members.entrySet()) {
+            id = entry.getValue().id;
+            break;
+        }
+        assertTrue(members.containsKey(id));
+        HealthClubSystem.removeMember(id);
+        assertFalse(members.containsKey(id));
     }
 
     @Test

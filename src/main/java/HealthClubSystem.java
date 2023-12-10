@@ -22,7 +22,7 @@ public class HealthClubSystem {
     /**
      * main - entry point into SysEng Health Club
      * */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         setMembers();
 
         while (true) {
