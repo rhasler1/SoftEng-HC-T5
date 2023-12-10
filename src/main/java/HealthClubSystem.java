@@ -13,7 +13,7 @@ public class HealthClubSystem {
     /**
      * hashmap to store member information
      * */
-    private static HashMap<String, Member> members = new HashMap<>();
+    protected static HashMap<String, Member> members = new HashMap<>();
     /**
      * scanner to take in user input
      * */
