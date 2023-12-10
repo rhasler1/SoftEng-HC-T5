@@ -1,7 +1,7 @@
 # SoftEng-HC-T5
 
 ### Description
-`SoftEngHC` is a Java-based software system designed to manage the SoftEng Health Club.
+SoftEngHC is a Java-based software system designed to manage the SoftEng Health Club.
 
 `Functionality` currently supports account creation, account deletion, member look-up, and membership validation.
 
@@ -16,5 +16,5 @@ will work just fine.
 
 ### Usage
 
-1. Run 'HealthClubSystem' inside of IntelliJ to start the program.
-2. Run 'TestHealthClubSystem' inside of IntelliJ to execute test cases.
+1. Navigate to src/main/java and run 'HealthClubSystem' inside of IntelliJ to start the program.
+2. Navigate to src/test/java run 'TestHealthClubSystem' inside of IntelliJ to execute test cases.
