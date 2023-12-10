@@ -13,7 +13,7 @@ public class HealthClubSystem {
     /**
      * hashmap to store member information
      * */
-    protected static HashMap<String, Member> members = new HashMap<>();
+    private static HashMap<String, Member> members = new HashMap<>();
     /**
      * scanner to take in user input
      * */
@@ -23,7 +23,7 @@ public class HealthClubSystem {
      * main - entry point into SysEng Health Club
      * */
     public static void main(String[] args) throws IOException {
-        members = FileOps.getMembers();
+        setMembers();
 
         while (true) {
             System.out.println("SysEng Health Club Options: \n0 - Exit system \n1 - Access member information " +
@@ -335,5 +335,19 @@ public class HealthClubSystem {
      * */
     public static void removeMember(String membershipID) {
         members.remove(membershipID);
+    }
+
+    /**
+     * method to set initial state of members
+     * */
+    public static void setMembers() {
+        members = FileOps.getMembers();
+    }
+
+    /**
+     * getter - used for testing
+     * */
+    public static HashMap<String, Member> getMembers() {
+        return members;
     }
 }
